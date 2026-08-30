@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What's Your Real Hourly Wage? — Free Calculator | WageReality</title>
+<title>Your Real Hourly Wage? — Free Calculator | WageReality</title>
 <meta name="description" content="Free real hourly wage calculator. See your true pay per hour after commute, unpaid overtime, and job costs — no signup, fully private.">
 <link rel="canonical" href="https://wagereality.com/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="What's Your Real Hourly Wage? — Free Calculator | WageReality">
+<meta property="og:title" content="Your Real Hourly Wage? — Free Calculator | WageReality">
 <meta property="og:description" content="Free real hourly wage calculator. See your true pay per hour after commute, unpaid overtime, and job costs — no signup, fully private.">
 <meta property="og:url" content="https://wagereality.com/">
 <meta property="og:image" content="https://wagereality.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What's Your Real Hourly Wage? — Free Calculator | WageReality">
+<meta name="twitter:title" content="Your Real Hourly Wage? — Free Calculator | WageReality">
 <meta name="twitter:description" content="Free real hourly wage calculator. See your true pay per hour after commute, unpaid overtime, and job costs — no signup, fully private.">
 <meta name="twitter:image" content="https://wagereality.com/og-image.png">
 
@@ -322,11 +322,6 @@
     z-index:1000; box-shadow:0 10px 30px rgba(0,0,0,.35);
   }
   #toast.show{ opacity:1; transform:translate(-50%,0); }
-
-  .sr-only{
-    position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
-    clip:rect(0,0,0,0); white-space:nowrap; border:0;
-  }
 </style>
 </head>
 <body>
@@ -377,7 +372,6 @@
               <span class="field-value" id="hoursVal">40 hrs</span>
             </div>
             <input type="range" id="hoursRange" min="1" max="80" step="1" value="40" aria-labelledby="hoursVal" aria-label="Scheduled work hours per week">
-            <input type="number" id="hoursNum" class="sr-only" min="1" max="80" value="40" aria-hidden="true" tabindex="-1">
           </div>
 
           <div class="field">
@@ -386,7 +380,6 @@
               <span class="field-value" id="commuteVal">30 min</span>
             </div>
             <input type="range" id="commuteRange" min="0" max="180" step="5" value="30" aria-labelledby="commuteVal" aria-label="Daily commute round trip in minutes">
-            <input type="number" id="commuteNum" class="sr-only" min="0" max="180" value="30" aria-hidden="true" tabindex="-1">
           </div>
 
           <button type="button" class="adv-toggle" id="advToggle" aria-expanded="false" aria-controls="advPanel">
@@ -610,7 +603,7 @@ annualLoss = (naiveWage - realWage) * realHoursPerMonth * 12</div>
   };
 
   var el = {};
-  ['salary','currency','hoursRange','hoursNum','commuteRange','commuteNum',
+  ['salary','currency','hoursRange','commuteRange',
    'decompRange','overtimeRange','commuteCost','otherCost','daysRange','freelanceRange',
    'hoursVal','commuteVal','decompVal','overtimeVal','daysVal','freelanceVal',
    'advToggle','advPanel','freelanceHoursWrap',
