@@ -1,0 +1,6 @@
+# WageReality
+
+> Free, no-signup calculator that computes a person's real hourly wage by subtracting job-related costs and adding job-related time (commute, overtime, decompression) from salary, based on the "real hourly wage" concept in Your Money or Your Life by Vicki Robin and Joe Dominguez.
+
+## Pages
+- [WageReality Calculator](https://wagereality.com/): Interactive true hourly wage calculator with formula, worked example, and FAQ.

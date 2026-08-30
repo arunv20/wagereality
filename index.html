@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What's Your Real Hourly Wage? — Free Calculator | WageReality</title>
+<meta name="description" content="Free real hourly wage calculator. See your true pay per hour after commute, unpaid overtime, and job costs — no signup, fully private.">
+<link rel="canonical" href="https://wagereality.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="What's Your Real Hourly Wage? — Free Calculator | WageReality">
+<meta property="og:description" content="Free real hourly wage calculator. See your true pay per hour after commute, unpaid overtime, and job costs — no signup, fully private.">
+<meta property="og:url" content="https://wagereality.com/">
+<meta property="og:image" content="https://wagereality.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What's Your Real Hourly Wage? — Free Calculator | WageReality">
+<meta name="twitter:description" content="Free real hourly wage calculator. See your true pay per hour after commute, unpaid overtime, and job costs — no signup, fully private.">
+<meta name="twitter:image" content="https://wagereality.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "WageReality",
+  "url": "https://wagereality.com/",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Free, no-signup calculator that computes your real hourly wage by subtracting job-related costs and adding job-related time (commute, overtime, decompression) from your salary.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is real hourly wage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Real hourly wage is your actual take-home pay divided by every hour your job truly costs you, not just the hours on your schedule. It subtracts job-related expenses from your pay and adds commute, unpaid overtime, and decompression time to your hours. The result is almost always lower than your naive hourly rate (pay divided by scheduled hours). This concept comes from the book Your Money or Your Life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate real hourly wage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add up every job-related hour: scheduled hours, unpaid overtime, daily commute time, and decompression time needed to recover after work. Subtract job-related costs like commuting expenses and work-related spending from your take-home pay. Divide the adjusted pay by the adjusted hours to get your real hourly wage. WageReality does this calculation automatically as you type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the real hourly wage concept come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The real hourly wage concept comes from the 1992 personal finance book Your Money or Your Life by Vicki Robin and Joe Dominguez. The book argues that a job costs more than the hours listed on a paycheck, once commuting, decompression, and work-related spending are counted. WageReality applies that framework to a live, private calculator. No sign-up or account is required to use it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my real hourly wage lower than I expected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your real hourly wage is usually lower because it counts hours your naive rate ignores, like commuting and unpaid overtime. It also subtracts money you spend because of your job, such as commuting costs or convenience purchases. Most people underestimate both the extra hours and the extra spending a job requires. Seeing the gap is the first step to deciding if it's worth it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a job-related cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Job-related costs are any expenses you would not have if you didn't have this job. Common examples include commuting costs, work clothing, convenience food bought because you're too tired to cook, and stress-driven spending. Work-related subscriptions or tools you pay for out of pocket also count. WageReality groups these under \"other job-related monthly spend\" in the advanced options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does decompression time mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Decompression time is the time you need after work to recover before you can genuinely relax or be present for your own life. It's the gap between clocking out and actually feeling \"off the clock.\" WageReality lets you set this from a quick self-check (Ready to go, Need downtime, or Drained) or adjust it manually. This time counts as a real cost of the job, even though no one pays you for it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is WageReality free and private to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, WageReality is completely free, with no sign-up, login, or account required. All calculations run in your browser using JavaScript; no financial data is sent to a server or stored anywhere. You can close the tab and nothing you entered is saved or transmitted."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WageReality",
+  "url": "https://wagereality.com/",
+  "description": "PLACEHOLDER — replace with real organization/author details before launch."
+}
+</script>
+
+<style>
+  :root{
+    --navy:#0A1628; --navy2:#111E35; --navy3:#1A2D4A; --card:#152237;
+    --border:#1E3050; --slate:#8892A4; --white:#FFFFFF; --accent:#F5A623;
+    --accent-dark:#D68C0F;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--navy); color:var(--white);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight:400; line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 20px; }
+  a{ color:var(--accent); }
+
+  /* Header */
+  header.site{ padding:20px 0; border-bottom:1px solid var(--border); }
+  .logo{ font-weight:600; font-size:18px; letter-spacing:-0.01em; color:var(--white); text-decoration:none; }
+  .logo span{ color:var(--accent); }
+
+  /* Hero */
+  .hero{ padding: clamp(28px,5vw,56px) 0 16px; }
+  h1{
+    font-size:clamp(28px,4.2vw,44px); line-height:1.15; letter-spacing:-0.02em;
+    margin:0 0 10px; max-width:20ch;
+  }
+  .hero-sub{ color:var(--slate); font-size:clamp(15px,1.6vw,18px); max-width:56ch; margin:0 0 32px; }
+
+  .calc-grid{ display:grid; grid-template-columns:1fr; gap:24px; align-items:start; }
+  @media(min-width:900px){ .calc-grid{ grid-template-columns:1fr 1fr; gap:32px; } }
+
+  /* Quick pick */
+  .quick-pick{ margin-bottom:24px; }
+  .quick-pick p{ margin:0 0 10px; font-size:14px; color:var(--slate); font-weight:500; }
+  .feel-row{ display:flex; gap:10px; flex-wrap:wrap; }
+  .feel-btn{
+    flex:1 1 auto; min-width:100px; min-height:44px; padding:10px 14px;
+    background:var(--card); border:1px solid var(--border); border-radius:10px;
+    color:var(--white); font-family:inherit; font-size:14px; font-weight:500; cursor:pointer;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .feel-btn:hover{ border-color:var(--accent); }
+  .feel-btn[aria-pressed="true"]{ background:var(--navy3); border-color:var(--accent); color:var(--accent); }
+  .feel-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+  /* Inputs */
+  .field{ margin-bottom:20px; }
+  .field-label-row{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:8px; }
+  label{ font-size:14px; font-weight:500; color:var(--white); }
+  .field-value{ font-size:14px; color:var(--accent); font-weight:600; white-space:nowrap; }
+  .salary-row{ display:flex; gap:10px; }
+  input[type="number"]{
+    width:100%; background:var(--card); border:1px solid var(--border); color:var(--white);
+    font-family:inherit; font-size:16px; border-radius:10px; padding:12px 14px; min-height:44px;
+  }
+  select{
+    background:var(--card); border:1px solid var(--border); color:var(--white);
+    font-family:inherit; font-size:15px; border-radius:10px; padding:12px 10px; min-height:44px;
+  }
+  input[type="number"]:focus, select:focus, input[type="range"]:focus-visible{
+    outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent);
+  }
+  input[type="range"]{
+    -webkit-appearance:none; appearance:none; width:100%; height:6px; border-radius:3px;
+    background:var(--navy3); margin-top:6px;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none; width:20px; height:20px; border-radius:50%;
+    background:var(--accent); cursor:pointer; border:3px solid var(--navy);
+    box-shadow:0 0 0 1px var(--accent);
+  }
+  input[type="range"]::-moz-range-thumb{
+    width:20px; height:20px; border-radius:50%; background:var(--accent);
+    cursor:pointer; border:3px solid var(--navy); box-shadow:0 0 0 1px var(--accent);
+  }
+  .hint{ font-size:12.5px; color:var(--slate); margin-top:6px; }
+
+  /* Advanced toggle */
+  .adv-toggle{
+    width:100%; min-height:44px; text-align:left; background:none; border:1px solid var(--border);
+    border-radius:10px; color:var(--accent); font-family:inherit; font-size:14px; font-weight:600;
+    padding:12px 14px; cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+    margin-top:4px;
+  }
+  .adv-toggle:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .adv-toggle .chev{ transition:transform .2s ease; }
+  .adv-toggle[aria-expanded="true"] .chev{ transform:rotate(180deg); }
+  .adv-panel{ overflow:hidden; max-height:0; transition:max-height .25s ease; }
+  .adv-panel.open{ max-height:900px; }
+  .adv-panel-inner{ padding-top:20px; }
+
+  /* Result card */
+  .result-card{
+    position:relative; overflow:hidden; border-radius:20px; padding:clamp(24px,3.5vw,36px);
+    background:linear-gradient(160deg, var(--card) 0%, var(--navy2) 100%);
+    border:1px solid var(--border);
+  }
+  .result-circle{
+    position:absolute; top:-60px; right:-60px; width:200px; height:200px; border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, var(--accent) 0%, transparent 72%);
+    opacity:.22; pointer-events:none;
+  }
+  .result-label{
+    font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--slate);
+    font-weight:600; margin:0 0 10px; position:relative;
+  }
+  .result-number{
+    font-family:'DM Serif Display',Georgia,serif; font-size:clamp(48px,7.5vw,72px); line-height:1;
+    color:var(--white); margin:0 0 14px; position:relative;
+  }
+  .result-compare{ font-size:15px; color:var(--slate); margin:0 0 16px; position:relative; }
+  .result-compare s{ color:var(--slate); }
+  .gap-pill{
+    display:inline-flex; align-items:center; gap:6px; background:rgba(245,166,35,.14);
+    color:var(--accent); border:1px solid rgba(245,166,35,.35); border-radius:999px;
+    padding:6px 14px; font-size:13.5px; font-weight:600; position:relative;
+  }
+
+  .breakdown{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:20px;
+  }
+  @media(max-width:520px){ .breakdown{ grid-template-columns:1fr; } }
+  .bd-item{ background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; }
+  .bd-item .bd-label{ font-size:12px; color:var(--slate); margin:0 0 6px; }
+  .bd-item .bd-value{ font-size:19px; font-weight:600; margin:0; }
+
+  /* Tabs */
+  .tabs{ display:flex; gap:8px; margin:14px 0 16px; flex-wrap:wrap; }
+  .tab-btn{
+    min-height:44px; padding:10px 16px; background:none; border:1px solid var(--border); border-radius:999px;
+    color:var(--slate); font-family:inherit; font-size:14px; font-weight:500; cursor:pointer;
+  }
+  .tab-btn[aria-selected="true"]{ background:var(--accent); border-color:var(--accent); color:var(--navy); font-weight:600; }
+  .tab-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .freelance-hours{ margin-top:14px; max-width:280px; }
+
+  /* Sections */
+  section{ padding:clamp(36px,5vw,64px) 0; }
+  section.bordered{ border-top:1px solid var(--border); }
+  h2{ font-size:clamp(22px,3vw,30px); letter-spacing:-0.01em; margin:0 0 10px; }
+  h3{ font-size:17px; margin:0; }
+  .section-sub{ color:var(--slate); margin:0 0 28px; max-width:60ch; }
+
+  /* Time value tool */
+  .tv-card{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:24px; }
+  .tv-row{ display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end; margin-top:14px; }
+  .tv-row .field{ margin:0; flex:1 1 200px; }
+  .tv-result{ font-family:'DM Serif Display',Georgia,serif; font-size:clamp(26px,3.5vw,34px); margin-top:16px; }
+  .tv-result strong{ color:var(--accent); }
+
+  /* Share */
+  .share-grid{ display:grid; grid-template-columns:1fr; gap:24px; }
+  @media(min-width:800px){ .share-grid{ grid-template-columns:1fr 1fr; } }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px;
+    border-radius:12px; font-family:inherit; font-size:15px; font-weight:600; cursor:pointer;
+    border:none; padding:12px 20px; text-decoration:none;
+  }
+  .btn-whatsapp{ width:100%; background:#25D366; color:#06210F; }
+  .btn-accent{ background:var(--accent); color:var(--navy); }
+  .btn-outline{ background:none; border:1px solid var(--border); color:var(--white); width:100%; }
+  .share-card-preview{ background:var(--navy2); border:1px solid var(--border); border-radius:16px; padding:16px; text-align:center; }
+  #shareCanvasImg{ width:100%; max-width:320px; border-radius:12px; margin:0 auto 14px; display:block; }
+
+  /* Affiliate */
+  .affiliate-strip{
+    background:linear-gradient(120deg, var(--navy3), var(--card)); border:1px solid var(--border);
+    border-radius:16px; padding:24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .affiliate-strip .aff-text h3{ margin-bottom:6px; }
+  .affiliate-strip .aff-text p{ margin:0; color:var(--slate); font-size:14px; }
+
+  /* How calculated */
+  .formula-box{
+    background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5px; color:var(--white);
+    overflow-x:auto; line-height:1.7; margin:20px 0; white-space:pre-wrap;
+  }
+  .example-box{ margin-top:20px; }
+  .example-box p{ margin:0 0 10px; }
+
+  /* FAQ */
+  .faq-item{ border-bottom:1px solid var(--border); }
+  .faq-item h3{ margin:0; }
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; color:var(--white);
+    font-family:inherit; font-size:16px; font-weight:500; padding:18px 0; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:44px;
+  }
+  .faq-q:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .faq-q .plus{ font-size:20px; color:var(--accent); transition:transform .2s ease; flex-shrink:0; }
+  .faq-q[aria-expanded="true"] .plus{ transform:rotate(45deg); }
+  .faq-a{ overflow:hidden; max-height:0; transition:max-height .25s ease; color:var(--slate); }
+  .faq-a.open{ max-height:400px; }
+  .faq-a-inner{ padding:0 0 18px; }
+
+  /* Footer */
+  footer{ border-top:1px solid var(--border); padding:32px 0; }
+  footer .foot-logo{ font-weight:600; margin-bottom:10px; }
+  footer p{ color:var(--slate); font-size:13px; margin:4px 0; max-width:70ch; }
+
+  /* Toast */
+  #toast{
+    position:fixed; bottom:24px; left:50%; transform:translate(-50%,10px); background:var(--navy3);
+    border:1px solid var(--border); color:var(--white); padding:12px 20px; border-radius:10px;
+    font-size:14px; opacity:0; pointer-events:none; transition:opacity .25s ease, transform .25s ease;
+    z-index:1000; box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  #toast.show{ opacity:1; transform:translate(-50%,0); }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+    clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="logo">Wage<span>Reality</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>What do you actually earn per hour?</h1>
+      <p class="hero-sub">Your salary divided by scheduled hours isn't your real hourly wage. Add in commute, unpaid overtime, and decompression time — subtract job costs — and see what your job really pays.</p>
+
+      <div class="calc-grid">
+        <div class="calc-inputs">
+
+          <div class="quick-pick">
+            <p id="feelLabel">How do you usually feel after work?</p>
+            <div class="feel-row" role="group" aria-labelledby="feelLabel">
+              <button type="button" class="feel-btn" data-feel="ready" data-decomp="0" aria-pressed="false">Ready to go</button>
+              <button type="button" class="feel-btn" data-feel="downtime" data-decomp="30" aria-pressed="true">Need downtime</button>
+              <button type="button" class="feel-btn" data-feel="drained" data-decomp="90" aria-pressed="false">Drained</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="salary">Monthly take-home pay</label>
+            </div>
+            <div class="salary-row">
+              <input type="number" id="salary" min="0" step="50" value="4000" inputmode="decimal" aria-label="Monthly take-home pay amount">
+              <select id="currency" aria-label="Currency">
+                <option value="USD">USD ($)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="CAD">CAD ($)</option>
+                <option value="AUD">AUD ($)</option>
+                <option value="EUR">EUR (€)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="hoursRange">Scheduled work hours / week</label>
+              <span class="field-value" id="hoursVal">40 hrs</span>
+            </div>
+            <input type="range" id="hoursRange" min="1" max="80" step="1" value="40" aria-labelledby="hoursVal" aria-label="Scheduled work hours per week">
+            <input type="number" id="hoursNum" class="sr-only" min="1" max="80" value="40" aria-hidden="true" tabindex="-1">
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="commuteRange">Daily commute (round trip, minutes)</label>
+              <span class="field-value" id="commuteVal">30 min</span>
+            </div>
+            <input type="range" id="commuteRange" min="0" max="180" step="5" value="30" aria-labelledby="commuteVal" aria-label="Daily commute round trip in minutes">
+            <input type="number" id="commuteNum" class="sr-only" min="0" max="180" value="30" aria-hidden="true" tabindex="-1">
+          </div>
+
+          <button type="button" class="adv-toggle" id="advToggle" aria-expanded="false" aria-controls="advPanel">
+            <span>Show advanced options</span>
+            <span class="chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="adv-panel" id="advPanel">
+            <div class="adv-panel-inner">
+
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="decompRange">Decompression time / day</label>
+                  <span class="field-value" id="decompVal">30 min</span>
+                </div>
+                <input type="range" id="decompRange" min="0" max="180" step="5" value="30" aria-labelledby="decompVal" aria-label="Decompression minutes per day">
+              </div>
+
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="overtimeRange">Unpaid overtime / week</label>
+                  <span class="field-value" id="overtimeVal">0 hrs</span>
+                </div>
+                <input type="range" id="overtimeRange" min="0" max="40" step="1" value="0" aria-labelledby="overtimeVal" aria-label="Unpaid overtime hours per week">
+              </div>
+
+              <div class="field">
+                <label for="commuteCost">Monthly commute cost</label>
+                <input type="number" id="commuteCost" min="0" step="10" value="0" inputmode="decimal">
+              </div>
+
+              <div class="field">
+                <label for="otherCost">Other job-related monthly spend</label>
+                <input type="number" id="otherCost" min="0" step="10" value="0" inputmode="decimal">
+                <p class="hint">Work clothes, convenience food, stress-spending, work subscriptions — anything you spend because of this job.</p>
+              </div>
+
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="daysRange">Working days / week</label>
+                  <span class="field-value" id="daysVal">5 days</span>
+                </div>
+                <input type="range" id="daysRange" min="1" max="7" step="1" value="5" aria-labelledby="daysVal" aria-label="Working days per week">
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <div class="tabs" role="tablist" aria-label="Comparison mode">
+            <button type="button" class="tab-btn" role="tab" data-mode="current" aria-selected="true">Current job</button>
+            <button type="button" class="tab-btn" role="tab" data-mode="remote" aria-selected="false">Fully remote</button>
+            <button type="button" class="tab-btn" role="tab" data-mode="freelance" aria-selected="false">Freelance (custom)</button>
+          </div>
+          <div class="freelance-hours" id="freelanceHoursWrap" hidden>
+            <div class="field" style="margin:0;">
+              <div class="field-label-row">
+                <label for="freelanceRange">Freelance hours / week</label>
+                <span class="field-value" id="freelanceVal">30 hrs</span>
+              </div>
+              <input type="range" id="freelanceRange" min="1" max="80" step="1" value="30" aria-labelledby="freelanceVal" aria-label="Freelance hours per week">
+            </div>
+          </div>
+
+          <div class="result-card" role="status" aria-live="polite">
+            <div class="result-circle" aria-hidden="true"></div>
+            <p class="result-label">Your real hourly wage</p>
+            <p class="result-number" id="resultNumber">$18.88</p>
+            <p class="result-compare">Not <s id="naiveWageEl">$23.08</s>/hr like your salary suggests</p>
+            <span class="gap-pill" id="gapPill">18% less than it looks</span>
+          </div>
+
+          <div class="breakdown">
+            <div class="bd-item">
+              <p class="bd-label">Real hours / month</p>
+              <p class="bd-value" id="bdHours">198.6</p>
+            </div>
+            <div class="bd-item">
+              <p class="bd-label">Real take-home</p>
+              <p class="bd-value" id="bdTakeHome">$3,750</p>
+            </div>
+            <div class="bd-item">
+              <p class="bd-label">Est. lost / year</p>
+              <p class="bd-value" id="bdLoss">$9,998</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered">
+    <div class="wrap">
+      <h2>What does that purchase really cost you?</h2>
+      <p class="section-sub">Translated into hours of your real wage, not the price tag.</p>
+      <div class="tv-card">
+        <div class="tv-row">
+          <div class="field">
+            <label for="tvAmount">Purchase amount</label>
+            <input type="number" id="tvAmount" min="0" step="1" value="100" inputmode="decimal">
+          </div>
+        </div>
+        <p class="tv-result">That's <strong id="tvResult">5.3 hours</strong> of your real work</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered">
+    <div class="wrap">
+      <h2>Share your number</h2>
+      <p class="section-sub">Send your result, or download a shareable card.</p>
+      <div class="share-grid">
+        <div>
+          <a href="#" id="whatsappBtn" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share on WhatsApp</a>
+        </div>
+        <div class="share-card-preview">
+          <canvas id="shareCanvas" width="1000" height="1000" style="display:none;"></canvas>
+          <img id="shareCanvasImg" alt="Preview of your shareable WageReality result card" src="">
+          <button type="button" class="btn btn-outline" id="downloadCardBtn">Download image card</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered">
+    <div class="wrap">
+      <div class="affiliate-strip">
+        <div class="aff-text">
+          <h3>Thinking about a change?</h3>
+          <p>Browse remote-friendly roles that could raise your real hourly wage.</p>
+        </div>
+        <a href="https://remoteok.com" class="btn btn-accent" target="_blank" rel="noopener noreferrer sponsored">Browse open roles</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered" id="how">
+    <div class="wrap">
+      <h2>How this is calculated</h2>
+      <p>Real hourly wage is your job-adjusted take-home pay divided by every hour your job actually costs you, including time you're not paid for.</p>
+
+      <div class="formula-box">
+realHoursPerMonth = (hours + overtime + commuteMin/60*days + decompMin/60*days) * (52/12)
+naiveHoursPerMonth = hours * (52/12)
+realTakeHome = max(0, salary - commuteCost - otherWorkCost)
+realWage = realTakeHome / realHoursPerMonth
+naiveWage = salary / naiveHoursPerMonth
+gapPercent = round((1 - realWage/naiveWage) * 100)
+annualLoss = (naiveWage - realWage) * realHoursPerMonth * 12</div>
+
+      <div class="example-box">
+        <h3>Worked example</h3>
+        <p>Someone earning $4,000/month take-home, working 40 scheduled hours a week with a 40-minute daily round-trip commute and 30 minutes of decompression time, spending $250/month on commuting and other job costs, has a real hourly wage of about $18.88 — not the $23.08/hr their salary implies. That's an 18% gap, or roughly $9,998 a year.</p>
+      </div>
+
+      <p style="color:var(--slate); font-size:13.5px; margin-top:20px;">The real hourly wage concept is based on <em>Your Money or Your Life</em> by Vicki Robin and Joe Dominguez.</p>
+    </div>
+  </section>
+
+  <section class="bordered" id="faq">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-1">What is real hourly wage?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq-a-1"><div class="faq-a-inner">Real hourly wage is your actual take-home pay divided by every hour your job truly costs you, not just the hours on your schedule. It subtracts job-related expenses from your pay and adds commute, unpaid overtime, and decompression time to your hours. The result is almost always lower than your naive hourly rate (pay divided by scheduled hours). This concept comes from the book Your Money or Your Life.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-2">How do you calculate real hourly wage?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq-a-2"><div class="faq-a-inner">Add up every job-related hour: scheduled hours, unpaid overtime, daily commute time, and decompression time needed to recover after work. Subtract job-related costs like commuting expenses and work-related spending from your take-home pay. Divide the adjusted pay by the adjusted hours to get your real hourly wage. WageReality does this calculation automatically as you type.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-3">Where does the real hourly wage concept come from?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq-a-3"><div class="faq-a-inner">The real hourly wage concept comes from the 1992 personal finance book Your Money or Your Life by Vicki Robin and Joe Dominguez. The book argues that a job costs more than the hours listed on a paycheck, once commuting, decompression, and work-related spending are counted. WageReality applies that framework to a live, private calculator. No sign-up or account is required to use it.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-4">Why is my real hourly wage lower than I expected?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq-a-4"><div class="faq-a-inner">Your real hourly wage is usually lower because it counts hours your naive rate ignores, like commuting and unpaid overtime. It also subtracts money you spend because of your job, such as commuting costs or convenience purchases. Most people underestimate both the extra hours and the extra spending a job requires. Seeing the gap is the first step to deciding if it's worth it.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-5">What counts as a job-related cost?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq-a-5"><div class="faq-a-inner">Job-related costs are any expenses you would not have if you didn't have this job. Common examples include commuting costs, work clothing, convenience food bought because you're too tired to cook, and stress-driven spending. Work-related subscriptions or tools you pay for out of pocket also count. WageReality groups these under "other job-related monthly spend" in the advanced options.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-6">What does decompression time mean?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq-a-6"><div class="faq-a-inner">Decompression time is the time you need after work to recover before you can genuinely relax or be present for your own life. It's the gap between clocking out and actually feeling "off the clock." WageReality lets you set this from a quick self-check (Ready to go, Need downtime, or Drained) or adjust it manually. This time counts as a real cost of the job, even though no one pays you for it.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-7">Is WageReality free and private to use?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="faq-a-7"><div class="faq-a-inner">Yes, WageReality is completely free, with no sign-up, login, or account required. All calculations run in your browser using JavaScript; no financial data is sent to a server or stored anywhere. You can close the tab and nothing you entered is saved or transmitted.</div></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo">Wage<span style="color:var(--accent);">Reality</span></div>
+    <p>Not financial advice. Consult a qualified professional before making financial or career decisions.</p>
+    <p>&copy; <span id="year">2026</span> WageReality. All calculations happen in your browser — nothing is stored or transmitted.</p>
+  </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+
+  var state = {
+    currency:'USD', salary:4000, hours:40, commuteMin:30, decomp:30,
+    overtime:0, commuteCost:0, otherCost:0, days:5, freelanceHours:30,
+    mode:'current'
+  };
+
+  var el = {};
+  ['salary','currency','hoursRange','hoursNum','commuteRange','commuteNum',
+   'decompRange','overtimeRange','commuteCost','otherCost','daysRange','freelanceRange',
+   'hoursVal','commuteVal','decompVal','overtimeVal','daysVal','freelanceVal',
+   'advToggle','advPanel','freelanceHoursWrap',
+   'resultNumber','naiveWageEl','gapPill','bdHours','bdTakeHome','bdLoss',
+   'tvAmount','tvResult','whatsappBtn','shareCanvas','shareCanvasImg','downloadCardBtn','toast'
+  ].forEach(function(id){ el[id] = document.getElementById(id); });
+
+  function fmtMoney(n){
+    if (!isFinite(n)) n = 0;
+    try{
+      return new Intl.NumberFormat('en-US', { style:'currency', currency: state.currency, maximumFractionDigits: n < 1000 ? 2 : 0 }).format(n);
+    }catch(e){ return '$' + n.toFixed(2); }
+  }
+  function fmtMoneyWhole(n){
+    if (!isFinite(n)) n = 0;
+    try{
+      return new Intl.NumberFormat('en-US', { style:'currency', currency: state.currency, maximumFractionDigits:0 }).format(n);
+    }catch(e){ return '$' + Math.round(n); }
+  }
+
+  function calcFor(mode){
+    var salary = state.salary, days = state.days;
+    var decomp = mode === 'remote' ? Math.max(0, state.decomp - 15) : state.decomp;
+    var hours, overtime, commuteMin, commuteCost;
+    if (mode === 'current'){
+      hours = state.hours; overtime = state.overtime; commuteMin = state.commuteMin; commuteCost = state.commuteCost;
+    } else if (mode === 'remote'){
+      hours = state.hours; overtime = state.overtime; commuteMin = 0; commuteCost = 0;
+    } else {
+      hours = state.freelanceHours; overtime = 0; commuteMin = 0; commuteCost = 0;
+    }
+    var realHoursPerMonth = (hours + overtime + (commuteMin/60*days) + (decomp/60*days)) * (52/12);
+    var naiveHoursPerMonth = hours * (52/12);
+    var realTakeHome = Math.max(0, salary - commuteCost - state.otherCost);
+    var realWage = realHoursPerMonth > 0 ? realTakeHome / realHoursPerMonth : 0;
+    var naiveWage = naiveHoursPerMonth > 0 ? salary / naiveHoursPerMonth : 0;
+    var gapPercent = naiveWage > 0 ? Math.round((1 - realWage/naiveWage) * 100) : 0;
+    var annualLoss = (naiveWage - realWage) * realHoursPerMonth * 12;
+    return { realWage:realWage, naiveWage:naiveWage, gapPercent:gapPercent, annualLoss:annualLoss, realHoursPerMonth:realHoursPerMonth, realTakeHome:realTakeHome };
+  }
+
+  var lastRealWage = null;
+  function animateValue(elNode, from, to, duration, formatFn){
+    var start = null;
+    from = isFinite(from) ? from : to;
+    function step(ts){
+      if (!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var val = from + (to - from) * eased;
+      elNode.textContent = formatFn(val);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function render(){
+    var r = calcFor(state.mode);
+
+    animateValue(el.resultNumber, lastRealWage, r.realWage, 300, fmtMoney);
+    lastRealWage = r.realWage;
+
+    el.naiveWageEl.textContent = fmtMoney(r.naiveWage);
+    var gapText = r.gapPercent > 0
+      ? r.gapPercent + '% less than it looks'
+      : (r.gapPercent < 0 ? Math.abs(r.gapPercent) + '% more than it looks' : 'Matches your naive rate');
+    el.gapPill.textContent = gapText;
+
+    el.bdHours.textContent = r.realHoursPerMonth.toFixed(1);
+    el.bdTakeHome.textContent = fmtMoneyWhole(r.realTakeHome);
+    el.bdLoss.textContent = fmtMoneyWhole(Math.max(0, r.annualLoss));
+
+    var amt = parseFloat(el.tvAmount.value) || 0;
+    var tvHours = r.realWage > 0 ? amt / r.realWage : 0;
+    el.tvResult.innerHTML = tvHours.toFixed(1) + ' hours';
+
+    var msg = 'My real hourly wage is ' + fmtMoney(r.realWage) + '/hr — not ' + fmtMoney(r.naiveWage) +
+      '/hr like my salary suggests. Calculate yours: https://wagereality.com';
+    el.whatsappBtn.href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+
+    return r;
+  }
+
+  function bindRangeNumber(rangeEl, valEl, suffix, key, opts){
+    opts = opts || {};
+    rangeEl.addEventListener('input', function(){
+      var v = parseFloat(rangeEl.value);
+      state[key] = v;
+      valEl.textContent = v + suffix;
+      if (opts.onChange) opts.onChange(v);
+      render();
+    });
+  }
+
+  bindRangeNumber(el.hoursRange, el.hoursVal, ' hrs', 'hours');
+  bindRangeNumber(el.commuteRange, el.commuteVal, ' min', 'commuteMin');
+  bindRangeNumber(el.decompRange, el.decompVal, ' min', 'decomp');
+  bindRangeNumber(el.overtimeRange, el.overtimeVal, ' hrs', 'overtime');
+  bindRangeNumber(el.daysRange, el.daysVal, ' days', 'days');
+  bindRangeNumber(el.freelanceRange, el.freelanceVal, ' hrs', 'freelanceHours');
+
+  el.salary.addEventListener('input', function(){
+    state.salary = parseFloat(el.salary.value) || 0;
+    render();
+  });
+  el.currency.addEventListener('change', function(){
+    state.currency = el.currency.value;
+    render();
+  });
+  el.commuteCost.addEventListener('input', function(){
+    state.commuteCost = parseFloat(el.commuteCost.value) || 0;
+    render();
+  });
+  el.otherCost.addEventListener('input', function(){
+    state.otherCost = parseFloat(el.otherCost.value) || 0;
+    render();
+  });
+  el.tvAmount.addEventListener('input', render);
+
+  document.querySelectorAll('.feel-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.feel-btn').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+      var d = parseInt(btn.dataset.decomp, 10);
+      state.decomp = d;
+      el.decompRange.value = d;
+      el.decompVal.textContent = d + ' min';
+      render();
+    });
+  });
+
+  el.advToggle.addEventListener('click', function(){
+    var open = el.advToggle.getAttribute('aria-expanded') === 'true';
+    el.advToggle.setAttribute('aria-expanded', String(!open));
+    el.advToggle.querySelector('span').textContent = open ? 'Show advanced options' : 'Hide advanced options';
+    el.advPanel.classList.toggle('open', !open);
+  });
+
+  document.querySelectorAll('.tab-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.tab-btn').forEach(function(b){ b.setAttribute('aria-selected','false'); });
+      btn.setAttribute('aria-selected','true');
+      state.mode = btn.dataset.mode;
+      el.freelanceHoursWrap.hidden = state.mode !== 'freelance';
+      render();
+    });
+  });
+
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      var answer = document.getElementById(btn.getAttribute('aria-controls'));
+      answer.classList.toggle('open', !expanded);
+    });
+  });
+
+  function showToast(text){
+    el.toast.textContent = text;
+    el.toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function(){ el.toast.classList.remove('show'); }, 2500);
+  }
+
+  el.whatsappBtn.addEventListener('click', function(){
+    showToast('Opening WhatsApp share…');
+  });
+
+  function drawShareCard(){
+    var r = calcFor(state.mode);
+    var canvas = el.shareCanvas;
+    var ctx = canvas.getContext('2d');
+    var W = canvas.width, H = canvas.height;
+
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = '#0A1628';
+    ctx.fillRect(0,0,W,H);
+
+    var grad = ctx.createRadialGradient(W-120,120,10,W-120,120,340);
+    grad.addColorStop(0,'rgba(245,166,35,0.55)');
+    grad.addColorStop(1,'rgba(245,166,35,0)');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(W-120,120,340,0,Math.PI*2);
+    ctx.fill();
+
+    ctx.fillStyle = '#8892A4';
+    ctx.font = '600 26px Inter, sans-serif';
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillText('YOUR REAL HOURLY WAGE', 70, 190);
+
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '400 128px "DM Serif Display", Georgia, serif';
+    ctx.fillText(fmtMoney(r.realWage), 66, 340);
+
+    ctx.fillStyle = '#8892A4';
+    ctx.font = '400 32px Inter, sans-serif';
+    ctx.fillText('Not ' + fmtMoney(r.naiveWage) + '/hr like your salary suggests', 70, 400);
+
+    ctx.fillStyle = 'rgba(245,166,35,0.16)';
+    roundRect(ctx, 70, 440, 420, 70, 35);
+    ctx.fill();
+    ctx.fillStyle = '#F5A623';
+    ctx.font = '600 30px Inter, sans-serif';
+    var gapLabel = (r.gapPercent > 0 ? r.gapPercent + '% less than it looks' : 'Matches your naive rate');
+    ctx.fillText(gapLabel, 100, 486);
+
+    ctx.fillStyle = '#8892A4';
+    ctx.font = '500 26px Inter, sans-serif';
+    ctx.fillText('Calculate yours at WageReality.com', 70, H - 70);
+
+    el.shareCanvasImg.src = canvas.toDataURL('image/png');
+  }
+  function roundRect(ctx,x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);
+    ctx.arcTo(x+w,y,x+w,y+h,r);
+    ctx.arcTo(x+w,y+h,x,y+h,r);
+    ctx.arcTo(x,y+h,x,y,r);
+    ctx.arcTo(x,y,x+w,y,r);
+    ctx.closePath();
+  }
+
+  function refreshShareCard(){
+    if (document.fonts && document.fonts.ready){
+      document.fonts.ready.then(drawShareCard);
+    } else {
+      drawShareCard();
+    }
+  }
+
+  el.downloadCardBtn.addEventListener('click', function(){
+    drawShareCard();
+    var link = document.createElement('a');
+    link.download = 'wagereality-result.png';
+    link.href = el.shareCanvas.toDataURL('image/png');
+    link.click();
+    showToast('Image card downloaded');
+  });
+
+  var origRender = render;
+  render = function(){
+    var r = origRender();
+    refreshShareCard();
+    return r;
+  };
+
+  el.tvAmount.value = 100;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  render();
+})();
+</script>
+
+</body>
+</html>
