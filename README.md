@@ -55,6 +55,18 @@ Deliberately minimal, per the original build spec:
 - Mobile-first responsive from 375px, `clamp()` fluid type, 44px touch targets
 - Cross-links: header nav on each page links to the other
 
+## Adding a new page
+
+1. Create `your-page.html` at the project root, matching the design system in `index.html` — it must have a `<link rel="canonical" href="https://wagereality.com/...">`, a `<title>`, and a `<meta name="description">`, since the sitemap generator reads those directly.
+2. If you want a clean URL (no `.html`), add a rewrite in `vercel.json` like the existing `/compare-job-offers` one.
+3. Regenerate `sitemap.xml` and `llms.txt` from the pages that actually exist, instead of hand-editing them:
+   ```bash
+   python3 scripts/generate_sitemap.py
+   ```
+4. Commit and deploy as usual (see Deployment below).
+
+This removes the old failure mode of a page shipping without ever being added to the sitemap — the script derives both files from what's actually on each page's canonical/title/description tags, so it can't drift out of sync with reality. It only runs when invoked though; there's no pre-commit hook or CI check enforcing it yet.
+
 ## Local preview
 
 No build step — just open the file, or serve it statically:

@@ -3,5 +3,5 @@
 > Free, no-signup calculator that computes a person's real hourly wage by subtracting job-related costs and adding job-related time (commute, overtime, decompression) from salary, based on the "real hourly wage" concept in Your Money or Your Life by Vicki Robin and Joe Dominguez.
 
 ## Pages
-- [WageReality Calculator](https://wagereality.com/): Interactive true hourly wage calculator with formula, worked example, and FAQ.
-- [Compare Two Job Offers](https://wagereality.com/compare-job-offers): Side-by-side comparison of two job offers by real hourly wage, accounting for commute, overtime, decompression time, and job costs.
+- [Your Real Hourly Wage?](https://wagereality.com/): Free real hourly wage calculator. See your true pay per hour after commute, unpaid overtime, and job costs — no signup, fully private.
+- [Compare Two Job Offers by Real Hourly Wage](https://wagereality.com/compare-job-offers): Free tool to compare two job offers side by side by real hourly wage — commute, overtime, decompression and costs included, not just salary.
