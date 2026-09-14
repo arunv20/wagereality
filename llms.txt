@@ -4,3 +4,4 @@
 
 ## Pages
 - [WageReality Calculator](https://wagereality.com/): Interactive true hourly wage calculator with formula, worked example, and FAQ.
+- [Compare Two Job Offers](https://wagereality.com/compare-job-offers): Side-by-side comparison of two job offers by real hourly wage, accounting for commute, overtime, decompression time, and job costs.

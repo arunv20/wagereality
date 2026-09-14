@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1118XN41HK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1118XN41HK');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compare Two Job Offers by Real Hourly Wage | WageReality</title>
+<meta name="description" content="Free tool to compare two job offers side by side by real hourly wage — commute, overtime, decompression and costs included, not just salary.">
+<link rel="canonical" href="https://wagereality.com/compare-job-offers">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compare Two Job Offers by Real Hourly Wage | WageReality">
+<meta property="og:description" content="Free tool to compare two job offers side by side by real hourly wage — commute, overtime, decompression and costs included, not just salary.">
+<meta property="og:url" content="https://wagereality.com/compare-job-offers">
+<meta property="og:image" content="https://wagereality.com/og-image-compare.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Compare Two Job Offers by Real Hourly Wage | WageReality">
+<meta name="twitter:description" content="Free tool to compare two job offers side by side by real hourly wage — commute, overtime, decompression and costs included, not just salary.">
+<meta name="twitter:image" content="https://wagereality.com/og-image-compare.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "WageReality Job Offer Comparison",
+  "url": "https://wagereality.com/compare-job-offers",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Any",
+  "description": "Free, no-signup tool that compares two job offers side by side by real hourly wage, accounting for commute, unpaid overtime, decompression time, and job-related costs.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I fairly compare two job offers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compare their real hourly wage, not their salary, since salary alone hides differences in commute time, unpaid overtime, decompression time, and job-related costs. Two offers with the same salary can pay very differently per real hour once those factors are counted. Enter both offers' pay, hours, commute, and costs into this tool to see which one actually pays more per hour of your life. The offer with the higher real hourly wage is the better deal in time-adjusted terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a higher salary always mean a better job offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, a higher salary does not always mean a better real hourly wage. A raise can be fully or partly cancelled out by a longer commute, more unpaid overtime, or higher job-related costs at the new role. It's possible for a 10-15% raise to result in a lower real hourly wage than a lower-paying offer with an easier schedule. Always run the numbers rather than comparing salary figures alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I include a signing bonus or equity in this comparison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly in the monthly take-home field, since a one-time signing bonus or long-vesting equity isn't a reliable monthly amount. This tool is built around recurring monthly take-home pay, so it compares the ongoing real hourly wage of each offer. Treat a signing bonus as a separate, one-time factor to weigh alongside the real hourly wage result, not something to average into it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the two offers are in different cities with different costs of living?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool does not automatically adjust for cost of living differences between cities. It compares real hourly wage — pay per hour of time actually spent on the job — which is a separate question from how far that pay stretches locally. If cost of living matters to your decision, adjust the take-home pay figures yourself before comparing, or weigh the real hourly wage result alongside a separate cost-of-living comparison."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I factor in benefits like health insurance or PTO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, benefits are worth factoring in, but indirectly, since they don't fit neatly into an hourly wage formula. A cheaper health plan or extra paid time off effectively raises your real take-home pay, so you can approximate this by increasing the take-home pay field or lowering the job-cost field for the offer with better benefits. Then let the real hourly wage comparison reflect that adjustment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I don't know all the details of a new offer yet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use your best realistic estimate for anything you don't know yet, such as commute time or expected overtime, based on the role description or what you'd ask in a follow-up conversation with the employer. The result is only as accurate as the numbers you put in, so revisit the comparison once you have firmer details, such as after an offer call or a conversation with a future teammate about typical hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this to compare more than two job offers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool compares two offers at a time by design, to keep the comparison simple and readable. If you have more than two offers, run this comparison for each pair, or use the single-offer calculator on WageReality's homepage to get each offer's real hourly wage individually and then rank them yourself."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "WageReality",
+  "url": "https://wagereality.com/",
+  "description": "PLACEHOLDER — replace with real organization/author details before launch."
+}
+</script>
+
+<style>
+  :root{
+    --navy:#0A1628; --navy2:#111E35; --navy3:#1A2D4A; --card:#152237;
+    --border:#1E3050; --slate:#8892A4; --white:#FFFFFF; --accent:#F5A623;
+    --accent-dark:#D68C0F; --winner:#2ECC71;
+  }
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0; background:var(--navy); color:var(--white);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    font-weight:400; line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  img{ max-width:100%; }
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 20px; }
+  a{ color:var(--accent); }
+
+  header.site{ padding:20px 0; border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; }
+  header.site .wrap{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; width:100%; }
+  .logo{ font-weight:600; font-size:18px; letter-spacing:-0.01em; color:var(--white); text-decoration:none; }
+  .logo span{ color:var(--accent); }
+  .nav-link{ font-size:14px; font-weight:500; color:var(--slate); text-decoration:none; }
+  .nav-link:hover{ color:var(--accent); }
+
+  .hero{ padding: clamp(28px,5vw,56px) 0 16px; }
+  h1{
+    font-size:clamp(28px,4.2vw,44px); line-height:1.15; letter-spacing:-0.02em;
+    margin:0 0 10px; max-width:24ch;
+  }
+  .hero-sub{ color:var(--slate); font-size:clamp(15px,1.6vw,18px); max-width:60ch; margin:0 0 28px; }
+
+  .currency-row{ margin-bottom:28px; max-width:280px; }
+
+  .offers-grid{ display:grid; grid-template-columns:1fr; gap:24px; }
+  @media(min-width:860px){ .offers-grid{ grid-template-columns:1fr 1fr; gap:28px; } }
+
+  .offer-panel{ background:var(--card); border:1px solid var(--border); border-radius:16px; padding:clamp(18px,3vw,24px); }
+  .offer-panel h2{ margin:0 0 16px; font-size:19px; }
+
+  .quick-pick{ margin-bottom:20px; }
+  .quick-pick p{ margin:0 0 10px; font-size:13px; color:var(--slate); font-weight:500; }
+  .feel-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .feel-btn{
+    flex:1 1 auto; min-width:88px; min-height:44px; padding:9px 10px;
+    background:var(--navy2); border:1px solid var(--border); border-radius:10px;
+    color:var(--white); font-family:inherit; font-size:13px; font-weight:500; cursor:pointer;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .feel-btn:hover{ border-color:var(--accent); }
+  .feel-btn[aria-pressed="true"]{ background:var(--navy3); border-color:var(--accent); color:var(--accent); }
+  .feel-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+  .field{ margin-bottom:18px; }
+  .field-label-row{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:8px; }
+  label{ font-size:14px; font-weight:500; color:var(--white); }
+  .field-value{ font-size:13px; color:var(--accent); font-weight:600; white-space:nowrap; }
+  input[type="text"], input[type="number"]{
+    width:100%; background:var(--navy2); border:1px solid var(--border); color:var(--white);
+    font-family:inherit; font-size:16px; border-radius:10px; padding:12px 14px; min-height:44px;
+  }
+  select{
+    background:var(--navy2); border:1px solid var(--border); color:var(--white);
+    font-family:inherit; font-size:15px; border-radius:10px; padding:12px 10px; min-height:44px; width:100%;
+  }
+  input:focus, select:focus, input[type="range"]:focus-visible{
+    outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent);
+  }
+  input[type="range"]{
+    -webkit-appearance:none; appearance:none; width:100%; height:6px; border-radius:3px;
+    background:var(--navy3); margin-top:6px;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none; width:20px; height:20px; border-radius:50%;
+    background:var(--accent); cursor:pointer; border:3px solid var(--navy);
+    box-shadow:0 0 0 1px var(--accent);
+  }
+  input[type="range"]::-moz-range-thumb{
+    width:20px; height:20px; border-radius:50%; background:var(--accent);
+    cursor:pointer; border:3px solid var(--navy); box-shadow:0 0 0 1px var(--accent);
+  }
+  .hint{ font-size:12px; color:var(--slate); margin-top:6px; }
+
+  .adv-toggle{
+    width:100%; min-height:44px; text-align:left; background:none; border:1px solid var(--border);
+    border-radius:10px; color:var(--accent); font-family:inherit; font-size:13.5px; font-weight:600;
+    padding:11px 14px; cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+    margin-top:2px;
+  }
+  .adv-toggle:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .adv-toggle .chev{ transition:transform .2s ease; }
+  .adv-toggle[aria-expanded="true"] .chev{ transform:rotate(180deg); }
+  .adv-panel{ overflow:hidden; max-height:0; transition:max-height .25s ease; }
+  .adv-panel.open{ max-height:900px; }
+  .adv-panel-inner{ padding-top:18px; }
+
+  /* Verdict */
+  .verdict{
+    position:relative; overflow:hidden; border-radius:20px; padding:clamp(22px,3.5vw,32px);
+    background:linear-gradient(160deg, var(--card) 0%, var(--navy2) 100%);
+    border:1px solid var(--border); margin:32px 0 24px; text-align:center;
+  }
+  .verdict-circle{
+    position:absolute; top:-60px; left:50%; transform:translateX(-50%); width:280px; height:200px; border-radius:50%;
+    background:radial-gradient(circle at 50% 30%, var(--winner) 0%, transparent 72%);
+    opacity:.18; pointer-events:none;
+  }
+  .verdict-label{ font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--slate); font-weight:600; margin:0 0 10px; position:relative; }
+  .verdict-name{ font-family:'DM Serif Display',Georgia,serif; font-size:clamp(32px,5.5vw,48px); line-height:1.1; margin:0 0 12px; position:relative; }
+  .verdict-detail{ font-size:15px; color:var(--slate); margin:0; position:relative; }
+  .verdict-detail strong{ color:var(--white); }
+
+  .results-grid{ display:grid; grid-template-columns:1fr; gap:16px; }
+  @media(min-width:860px){ .results-grid{ grid-template-columns:1fr 1fr; } }
+  .result-card{
+    position:relative; overflow:hidden; border-radius:16px; padding:clamp(20px,3vw,26px);
+    background:var(--card); border:1px solid var(--border); transition:border-color .2s ease;
+  }
+  .result-card.winner{ border-color:var(--winner); }
+  .winner-badge{
+    display:inline-flex; align-items:center; gap:6px; background:rgba(46,204,113,.14);
+    color:var(--winner); border:1px solid rgba(46,204,113,.35); border-radius:999px;
+    padding:4px 12px; font-size:12px; font-weight:600; margin-bottom:12px;
+  }
+  .winner-badge[hidden]{ display:none; }
+  .result-name{ font-size:14px; color:var(--slate); font-weight:600; margin:0 0 8px; text-transform:uppercase; letter-spacing:.04em; }
+  .result-number{ font-family:'DM Serif Display',Georgia,serif; font-size:clamp(32px,5vw,42px); line-height:1; color:var(--white); margin:0 0 10px; }
+  .result-compare{ font-size:13.5px; color:var(--slate); margin:0 0 14px; }
+  .result-compare s{ color:var(--slate); }
+  .mini-breakdown{ display:flex; gap:16px; flex-wrap:wrap; font-size:13px; color:var(--slate); }
+  .mini-breakdown strong{ color:var(--white); display:block; font-size:15px; font-weight:600; }
+
+  section{ padding:clamp(36px,5vw,64px) 0; }
+  section.bordered{ border-top:1px solid var(--border); }
+  h2{ font-size:clamp(22px,3vw,30px); letter-spacing:-0.01em; margin:0 0 10px; }
+  h3{ font-size:17px; margin:0; }
+  .section-sub{ color:var(--slate); margin:0 0 28px; max-width:60ch; }
+
+  .share-grid{ display:grid; grid-template-columns:1fr; gap:24px; }
+  @media(min-width:800px){ .share-grid{ grid-template-columns:1fr 1fr; } }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px;
+    border-radius:12px; font-family:inherit; font-size:15px; font-weight:600; cursor:pointer;
+    border:none; padding:12px 20px; text-decoration:none;
+  }
+  .btn-whatsapp{ width:100%; background:#25D366; color:#06210F; }
+  .btn-outline{ background:none; border:1px solid var(--border); color:var(--white); width:100%; }
+  .share-card-preview{ background:var(--navy2); border:1px solid var(--border); border-radius:16px; padding:16px; text-align:center; }
+  #shareCanvasImg{ width:100%; max-width:320px; border-radius:12px; margin:0 auto 14px; display:block; }
+
+  .formula-box{
+    background:var(--card); border:1px solid var(--border); border-radius:14px; padding:20px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5px; color:var(--white);
+    overflow-x:auto; line-height:1.7; margin:20px 0; white-space:pre-wrap;
+  }
+  .example-box{ margin-top:20px; }
+  .example-box p{ margin:0 0 10px; }
+
+  .faq-item{ border-bottom:1px solid var(--border); }
+  .faq-item h3{ margin:0; }
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; color:var(--white);
+    font-family:inherit; font-size:16px; font-weight:500; padding:18px 0; cursor:pointer;
+    display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:44px;
+  }
+  .faq-q:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .faq-q .plus{ font-size:20px; color:var(--accent); transition:transform .2s ease; flex-shrink:0; }
+  .faq-q[aria-expanded="true"] .plus{ transform:rotate(45deg); }
+  .faq-a{ overflow:hidden; max-height:0; transition:max-height .25s ease; color:var(--slate); }
+  .faq-a.open{ max-height:400px; }
+  .faq-a-inner{ padding:0 0 18px; }
+
+  footer{ border-top:1px solid var(--border); padding:32px 0; }
+  footer .foot-logo{ font-weight:600; margin-bottom:10px; }
+  footer p{ color:var(--slate); font-size:13px; margin:4px 0; max-width:70ch; }
+
+  #toast{
+    position:fixed; bottom:24px; left:50%; transform:translate(-50%,10px); background:var(--navy3);
+    border:1px solid var(--border); color:var(--white); padding:12px 20px; border-radius:10px;
+    font-size:14px; opacity:0; pointer-events:none; transition:opacity .25s ease, transform .25s ease;
+    z-index:1000; box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  #toast.show{ opacity:1; transform:translate(-50%,0); }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a href="/" class="logo">Wage<span>Reality</span></a>
+    <a href="/" class="nav-link">← Real Hourly Wage Calculator</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Which job offer actually pays more per hour?</h1>
+      <p class="hero-sub">A bigger salary doesn't always mean a better deal. Enter both offers below — commute, overtime, decompression time, and job costs included — and see which one really pays more per hour of your life.</p>
+
+      <div class="currency-row">
+        <div class="field" style="margin:0;">
+          <label for="currency">Currency (both offers)</label>
+          <select id="currency" aria-label="Currency for both offers">
+            <option value="USD">USD ($)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="CAD">CAD ($)</option>
+            <option value="AUD">AUD ($)</option>
+            <option value="EUR">EUR (€)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="offers-grid">
+
+        <div class="offer-panel">
+          <h2 id="offerATitle">Offer A</h2>
+
+          <div class="field">
+            <label for="nameA">Label (optional)</label>
+            <input type="text" id="nameA" placeholder="e.g. Current job" maxlength="40">
+          </div>
+
+          <div class="quick-pick">
+            <p id="feelLabelA">How draining is this job day to day?</p>
+            <div class="feel-row" role="group" aria-labelledby="feelLabelA">
+              <button type="button" class="feel-btn" data-offer="A" data-feel="ready" data-decomp="0" aria-pressed="false">Ready to go</button>
+              <button type="button" class="feel-btn" data-offer="A" data-feel="downtime" data-decomp="30" aria-pressed="true">Need downtime</button>
+              <button type="button" class="feel-btn" data-offer="A" data-feel="drained" data-decomp="90" aria-pressed="false">Drained</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="salaryA">Monthly take-home pay</label>
+            <input type="number" id="salaryA" min="0" step="50" value="4000" inputmode="decimal">
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="hoursRangeA">Scheduled hours / week</label>
+              <span class="field-value" id="hoursValA">40 hrs</span>
+            </div>
+            <input type="range" id="hoursRangeA" min="1" max="80" step="1" value="40" aria-labelledby="hoursValA" aria-label="Offer A scheduled hours per week">
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="commuteRangeA">Daily commute (round trip, min)</label>
+              <span class="field-value" id="commuteValA">30 min</span>
+            </div>
+            <input type="range" id="commuteRangeA" min="0" max="180" step="5" value="30" aria-labelledby="commuteValA" aria-label="Offer A daily commute round trip in minutes">
+          </div>
+
+          <button type="button" class="adv-toggle" data-offer="A" aria-expanded="false" aria-controls="advPanelA">
+            <span>Show advanced options</span>
+            <span class="chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="adv-panel" id="advPanelA">
+            <div class="adv-panel-inner">
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="decompRangeA">Decompression time / day</label>
+                  <span class="field-value" id="decompValA">30 min</span>
+                </div>
+                <input type="range" id="decompRangeA" min="0" max="180" step="5" value="30" aria-labelledby="decompValA" aria-label="Offer A decompression minutes per day">
+              </div>
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="overtimeRangeA">Unpaid overtime / week</label>
+                  <span class="field-value" id="overtimeValA">0 hrs</span>
+                </div>
+                <input type="range" id="overtimeRangeA" min="0" max="40" step="1" value="0" aria-labelledby="overtimeValA" aria-label="Offer A unpaid overtime hours per week">
+              </div>
+              <div class="field">
+                <label for="commuteCostA">Monthly commute cost</label>
+                <input type="number" id="commuteCostA" min="0" step="10" value="0" inputmode="decimal">
+              </div>
+              <div class="field">
+                <label for="otherCostA">Other job-related monthly spend</label>
+                <input type="number" id="otherCostA" min="0" step="10" value="0" inputmode="decimal">
+              </div>
+              <div class="field" style="margin-bottom:0;">
+                <div class="field-label-row">
+                  <label for="daysRangeA">Working days / week</label>
+                  <span class="field-value" id="daysValA">5 days</span>
+                </div>
+                <input type="range" id="daysRangeA" min="1" max="7" step="1" value="5" aria-labelledby="daysValA" aria-label="Offer A working days per week">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-panel">
+          <h2 id="offerBTitle">Offer B</h2>
+
+          <div class="field">
+            <label for="nameB">Label (optional)</label>
+            <input type="text" id="nameB" placeholder="e.g. New offer" maxlength="40">
+          </div>
+
+          <div class="quick-pick">
+            <p id="feelLabelB">How draining is this job day to day?</p>
+            <div class="feel-row" role="group" aria-labelledby="feelLabelB">
+              <button type="button" class="feel-btn" data-offer="B" data-feel="ready" data-decomp="0" aria-pressed="false">Ready to go</button>
+              <button type="button" class="feel-btn" data-offer="B" data-feel="downtime" data-decomp="30" aria-pressed="false">Need downtime</button>
+              <button type="button" class="feel-btn" data-offer="B" data-feel="drained" data-decomp="45" aria-pressed="true">Drained</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="salaryB">Monthly take-home pay</label>
+            <input type="number" id="salaryB" min="0" step="50" value="4500" inputmode="decimal">
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="hoursRangeB">Scheduled hours / week</label>
+              <span class="field-value" id="hoursValB">40 hrs</span>
+            </div>
+            <input type="range" id="hoursRangeB" min="1" max="80" step="1" value="40" aria-labelledby="hoursValB" aria-label="Offer B scheduled hours per week">
+          </div>
+
+          <div class="field">
+            <div class="field-label-row">
+              <label for="commuteRangeB">Daily commute (round trip, min)</label>
+              <span class="field-value" id="commuteValB">60 min</span>
+            </div>
+            <input type="range" id="commuteRangeB" min="0" max="180" step="5" value="60" aria-labelledby="commuteValB" aria-label="Offer B daily commute round trip in minutes">
+          </div>
+
+          <button type="button" class="adv-toggle" data-offer="B" aria-expanded="false" aria-controls="advPanelB">
+            <span>Show advanced options</span>
+            <span class="chev" aria-hidden="true">▾</span>
+          </button>
+          <div class="adv-panel" id="advPanelB">
+            <div class="adv-panel-inner">
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="decompRangeB">Decompression time / day</label>
+                  <span class="field-value" id="decompValB">45 min</span>
+                </div>
+                <input type="range" id="decompRangeB" min="0" max="180" step="5" value="45" aria-labelledby="decompValB" aria-label="Offer B decompression minutes per day">
+              </div>
+              <div class="field">
+                <div class="field-label-row">
+                  <label for="overtimeRangeB">Unpaid overtime / week</label>
+                  <span class="field-value" id="overtimeValB">0 hrs</span>
+                </div>
+                <input type="range" id="overtimeRangeB" min="0" max="40" step="1" value="0" aria-labelledby="overtimeValB" aria-label="Offer B unpaid overtime hours per week">
+              </div>
+              <div class="field">
+                <label for="commuteCostB">Monthly commute cost</label>
+                <input type="number" id="commuteCostB" min="0" step="10" value="0" inputmode="decimal">
+              </div>
+              <div class="field">
+                <label for="otherCostB">Other job-related monthly spend</label>
+                <input type="number" id="otherCostB" min="0" step="10" value="0" inputmode="decimal">
+              </div>
+              <div class="field" style="margin-bottom:0;">
+                <div class="field-label-row">
+                  <label for="daysRangeB">Working days / week</label>
+                  <span class="field-value" id="daysValB">5 days</span>
+                </div>
+                <input type="range" id="daysRangeB" min="1" max="7" step="1" value="5" aria-labelledby="daysValB" aria-label="Offer B working days per week">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="verdict" role="status" aria-live="polite">
+        <div class="verdict-circle" aria-hidden="true"></div>
+        <p class="verdict-label">The verdict</p>
+        <p class="verdict-name" id="verdictName">Offer B pays more per hour</p>
+        <p class="verdict-detail" id="verdictDetail">About <strong>$0.79/hr</strong> more in real terms — a <strong>4%</strong> difference.</p>
+      </div>
+
+      <div class="results-grid">
+        <div class="result-card" id="cardA">
+          <span class="winner-badge" id="badgeA" hidden>Higher real wage</span>
+          <p class="result-name" id="resultNameA">Offer A</p>
+          <p class="result-number" id="resultNumberA">$20.51</p>
+          <p class="result-compare">Not <s id="naiveWageA">$23.08</s>/hr like the salary suggests</p>
+          <div class="mini-breakdown">
+            <div><strong id="bdHoursA">195.0</strong>real hrs / mo</div>
+            <div><strong id="bdTakeHomeA">$4,000</strong>real take-home</div>
+          </div>
+        </div>
+        <div class="result-card" id="cardB">
+          <span class="winner-badge" id="badgeB" hidden>Higher real wage</span>
+          <p class="result-name" id="resultNameB">Offer B</p>
+          <p class="result-number" id="resultNumberB">$21.30</p>
+          <p class="result-compare">Not <s id="naiveWageB">$25.96</s>/hr like the salary suggests</p>
+          <div class="mini-breakdown">
+            <div><strong id="bdHoursB">211.3</strong>real hrs / mo</div>
+            <div><strong id="bdTakeHomeB">$4,500</strong>real take-home</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered">
+    <div class="wrap">
+      <h2>Share this comparison</h2>
+      <p class="section-sub">Send the verdict, or download a shareable card.</p>
+      <div class="share-grid">
+        <div>
+          <a href="#" id="whatsappBtn" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">Share on WhatsApp</a>
+        </div>
+        <div class="share-card-preview">
+          <canvas id="shareCanvas" width="1000" height="1000" style="display:none;"></canvas>
+          <img id="shareCanvasImg" alt="Preview of your shareable job offer comparison card" src="">
+          <button type="button" class="btn btn-outline" id="downloadCardBtn">Download image card</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bordered" id="how">
+    <div class="wrap">
+      <h2>How this comparison is calculated</h2>
+      <p>Each offer's real hourly wage is calculated independently using the same formula, then compared directly against the other.</p>
+
+      <div class="formula-box">
+realHoursPerMonth = (hours + overtime + commuteMin/60*days + decompMin/60*days) * (52/12)
+realTakeHome = max(0, salary - commuteCost - otherWorkCost)
+realWage = realTakeHome / realHoursPerMonth
+difference = |realWageA - realWageB|
+percentDifference = round(difference / min(realWageA, realWageB) * 100)</div>
+
+      <div class="example-box">
+        <h3>Worked example</h3>
+        <p>Someone is offered a 12.5% raise: their current job pays $4,000/month with a 40-minute commute, 30 minutes of decompression, and $250/month in job costs, for a real hourly wage of about $18.88. The new offer pays $4,500/month but has a 90-minute commute, 60 minutes of decompression, and $400/month in costs, working out to a real hourly wage of about $18.02. Despite the 12.5% raise, the new offer actually pays less per real hour — a gap the salary numbers alone don't show.</p>
+      </div>
+
+      <p style="color:var(--slate); font-size:13.5px; margin-top:20px;">This tool uses the same real hourly wage formula as WageReality's <a href="/">main calculator</a>, based on the concept from <em>Your Money or Your Life</em> by Vicki Robin and Joe Dominguez.</p>
+    </div>
+  </section>
+
+  <section class="bordered" id="faq">
+    <div class="wrap">
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="cfaq-a-1">How do I fairly compare two job offers?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="cfaq-a-1"><div class="faq-a-inner">Compare their real hourly wage, not their salary, since salary alone hides differences in commute time, unpaid overtime, decompression time, and job-related costs. Two offers with the same salary can pay very differently per real hour once those factors are counted. Enter both offers' pay, hours, commute, and costs into this tool to see which one actually pays more per hour of your life. The offer with the higher real hourly wage is the better deal in time-adjusted terms.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="cfaq-a-2">Does a higher salary always mean a better job offer?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="cfaq-a-2"><div class="faq-a-inner">No, a higher salary does not always mean a better real hourly wage. A raise can be fully or partly cancelled out by a longer commute, more unpaid overtime, or higher job-related costs at the new role. It's possible for a 10-15% raise to result in a lower real hourly wage than a lower-paying offer with an easier schedule. Always run the numbers rather than comparing salary figures alone.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="cfaq-a-3">Should I include a signing bonus or equity in this comparison?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="cfaq-a-3"><div class="faq-a-inner">Not directly in the monthly take-home field, since a one-time signing bonus or long-vesting equity isn't a reliable monthly amount. This tool is built around recurring monthly take-home pay, so it compares the ongoing real hourly wage of each offer. Treat a signing bonus as a separate, one-time factor to weigh alongside the real hourly wage result, not something to average into it.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="cfaq-a-4">What if the two offers are in different cities with different costs of living?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="cfaq-a-4"><div class="faq-a-inner">This tool does not automatically adjust for cost of living differences between cities. It compares real hourly wage — pay per hour of time actually spent on the job — which is a separate question from how far that pay stretches locally. If cost of living matters to your decision, adjust the take-home pay figures yourself before comparing, or weigh the real hourly wage result alongside a separate cost-of-living comparison.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="cfaq-a-5">Should I factor in benefits like health insurance or PTO?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="cfaq-a-5"><div class="faq-a-inner">Yes, benefits are worth factoring in, but indirectly, since they don't fit neatly into an hourly wage formula. A cheaper health plan or extra paid time off effectively raises your real take-home pay, so you can approximate this by increasing the take-home pay field or lowering the job-cost field for the offer with better benefits. Then let the real hourly wage comparison reflect that adjustment.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="cfaq-a-6">What if I don't know all the details of a new offer yet?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="cfaq-a-6"><div class="faq-a-inner">Use your best realistic estimate for anything you don't know yet, such as commute time or expected overtime, based on the role description or what you'd ask in a follow-up conversation with the employer. The result is only as accurate as the numbers you put in, so revisit the comparison once you have firmer details, such as after an offer call or a conversation with a future teammate about typical hours.</div></div>
+      </div>
+
+      <div class="faq-item">
+        <h3><button type="button" class="faq-q" aria-expanded="false" aria-controls="cfaq-a-7">Can I use this to compare more than two job offers?<span class="plus" aria-hidden="true">+</span></button></h3>
+        <div class="faq-a" id="cfaq-a-7"><div class="faq-a-inner">This tool compares two offers at a time by design, to keep the comparison simple and readable. If you have more than two offers, run this comparison for each pair, or use the single-offer calculator on WageReality's homepage to get each offer's real hourly wage individually and then rank them yourself.</div></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo">Wage<span style="color:var(--accent);">Reality</span></div>
+    <p>Not financial advice. Consult a qualified professional before making financial or career decisions.</p>
+    <p>&copy; <span id="year">2026</span> WageReality. Calculations happen entirely in your browser — what you enter is never sent to a server. Anonymous visit analytics may be collected to understand site traffic. Try the <a href="/">single-offer calculator</a> too.</p>
+  </div>
+</footer>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  'use strict';
+
+  var state = {
+    currency: 'USD',
+    A: { name:'', salary:4000, hours:40, commuteMin:30, decomp:30, overtime:0, commuteCost:0, otherCost:0, days:5 },
+    B: { name:'', salary:4500, hours:40, commuteMin:60, decomp:45, overtime:0, commuteCost:0, otherCost:0, days:5 }
+  };
+
+  var el = {};
+  ['currency',
+   'nameA','salaryA','hoursRangeA','commuteRangeA','decompRangeA','overtimeRangeA','commuteCostA','otherCostA','daysRangeA',
+   'hoursValA','commuteValA','decompValA','overtimeValA','daysValA','advPanelA',
+   'nameB','salaryB','hoursRangeB','commuteRangeB','decompRangeB','overtimeRangeB','commuteCostB','otherCostB','daysRangeB',
+   'hoursValB','commuteValB','decompValB','overtimeValB','daysValB','advPanelB',
+   'verdictName','verdictDetail',
+   'cardA','badgeA','resultNameA','resultNumberA','naiveWageA','bdHoursA','bdTakeHomeA',
+   'cardB','badgeB','resultNameB','resultNumberB','naiveWageB','bdHoursB','bdTakeHomeB',
+   'offerATitle','offerBTitle',
+   'whatsappBtn','shareCanvas','shareCanvasImg','downloadCardBtn','toast'
+  ].forEach(function(id){ el[id] = document.getElementById(id); });
+
+  function fmtMoney(n){
+    if (!isFinite(n)) n = 0;
+    try{
+      return new Intl.NumberFormat('en-US', { style:'currency', currency: state.currency, maximumFractionDigits: n < 1000 ? 2 : 0 }).format(n);
+    }catch(e){ return '$' + n.toFixed(2); }
+  }
+  function fmtMoneyWhole(n){
+    if (!isFinite(n)) n = 0;
+    try{
+      return new Intl.NumberFormat('en-US', { style:'currency', currency: state.currency, maximumFractionDigits:0 }).format(n);
+    }catch(e){ return '$' + Math.round(n); }
+  }
+
+  function calcOffer(o){
+    var realHoursPerMonth = (o.hours + o.overtime + (o.commuteMin/60*o.days) + (o.decomp/60*o.days)) * (52/12);
+    var naiveHoursPerMonth = o.hours * (52/12);
+    var realTakeHome = Math.max(0, o.salary - o.commuteCost - o.otherCost);
+    var realWage = realHoursPerMonth > 0 ? realTakeHome / realHoursPerMonth : 0;
+    var naiveWage = naiveHoursPerMonth > 0 ? o.salary / naiveHoursPerMonth : 0;
+    return { realWage:realWage, naiveWage:naiveWage, realHoursPerMonth:realHoursPerMonth, realTakeHome:realTakeHome };
+  }
+
+  function offerLabel(key){
+    var custom = (key === 'A' ? state.A.name : state.B.name).trim();
+    return custom || ('Offer ' + key);
+  }
+
+  function fillCard(key, r){
+    var nameEl = key === 'A' ? el.resultNameA : el.resultNameB;
+    var numEl = key === 'A' ? el.resultNumberA : el.resultNumberB;
+    var naiveEl = key === 'A' ? el.naiveWageA : el.naiveWageB;
+    var hoursEl = key === 'A' ? el.bdHoursA : el.bdHoursB;
+    var takeEl = key === 'A' ? el.bdTakeHomeA : el.bdTakeHomeB;
+    nameEl.textContent = offerLabel(key);
+    numEl.textContent = fmtMoney(r.realWage);
+    naiveEl.textContent = fmtMoney(r.naiveWage);
+    hoursEl.textContent = r.realHoursPerMonth.toFixed(1);
+    takeEl.textContent = fmtMoneyWhole(r.realTakeHome);
+  }
+
+  function render(){
+    var rA = calcOffer(state.A);
+    var rB = calcOffer(state.B);
+
+    fillCard('A', rA);
+    fillCard('B', rB);
+
+    var diff = rA.realWage - rB.realWage;
+    var absDiff = Math.abs(diff);
+    var lower = Math.min(rA.realWage, rB.realWage);
+    var pct = lower > 0 ? Math.round((absDiff / lower) * 100) : 0;
+
+    el.cardA.classList.remove('winner');
+    el.cardB.classList.remove('winner');
+    el.badgeA.hidden = true;
+    el.badgeB.hidden = true;
+
+    if (absDiff < 0.01) {
+      el.verdictName.textContent = 'Both offers pay about the same';
+      el.verdictDetail.innerHTML = 'Real hourly wage is within ' + fmtMoney(absDiff) + '/hr of each other.';
+    } else {
+      var winnerKey = diff > 0 ? 'A' : 'B';
+      var winnerLabel = offerLabel(winnerKey);
+      el.verdictName.textContent = winnerLabel + ' pays more per hour';
+      el.verdictDetail.innerHTML = 'About <strong>' + fmtMoney(absDiff) + '/hr</strong> more in real terms — a <strong>' + pct + '%</strong> difference.';
+      if (winnerKey === 'A') { el.cardA.classList.add('winner'); el.badgeA.hidden = false; }
+      else { el.cardB.classList.add('winner'); el.badgeB.hidden = false; }
+    }
+
+    var msg = 'Comparing two job offers on real hourly wage: ' + offerLabel('A') + ' = ' + fmtMoney(rA.realWage) +
+      '/hr, ' + offerLabel('B') + ' = ' + fmtMoney(rB.realWage) + '/hr. ' + el.verdictName.textContent +
+      '. Compare yours: https://wagereality.com/compare-job-offers';
+    el.whatsappBtn.href = 'https://wa.me/?text=' + encodeURIComponent(msg);
+
+    return { rA: rA, rB: rB };
+  }
+
+  function bindRangeNumber(offerKey, rangeEl, valEl, suffix, key){
+    rangeEl.addEventListener('input', function(){
+      var v = parseFloat(rangeEl.value);
+      state[offerKey][key] = v;
+      valEl.textContent = v + suffix;
+      render();
+    });
+  }
+
+  bindRangeNumber('A', el.hoursRangeA, el.hoursValA, ' hrs', 'hours');
+  bindRangeNumber('A', el.commuteRangeA, el.commuteValA, ' min', 'commuteMin');
+  bindRangeNumber('A', el.decompRangeA, el.decompValA, ' min', 'decomp');
+  bindRangeNumber('A', el.overtimeRangeA, el.overtimeValA, ' hrs', 'overtime');
+  bindRangeNumber('A', el.daysRangeA, el.daysValA, ' days', 'days');
+
+  bindRangeNumber('B', el.hoursRangeB, el.hoursValB, ' hrs', 'hours');
+  bindRangeNumber('B', el.commuteRangeB, el.commuteValB, ' min', 'commuteMin');
+  bindRangeNumber('B', el.decompRangeB, el.decompValB, ' min', 'decomp');
+  bindRangeNumber('B', el.overtimeRangeB, el.overtimeValB, ' hrs', 'overtime');
+  bindRangeNumber('B', el.daysRangeB, el.daysValB, ' days', 'days');
+
+  el.currency.addEventListener('change', function(){ state.currency = el.currency.value; render(); });
+
+  el.salaryA.addEventListener('input', function(){ state.A.salary = parseFloat(el.salaryA.value) || 0; render(); });
+  el.commuteCostA.addEventListener('input', function(){ state.A.commuteCost = parseFloat(el.commuteCostA.value) || 0; render(); });
+  el.otherCostA.addEventListener('input', function(){ state.A.otherCost = parseFloat(el.otherCostA.value) || 0; render(); });
+  el.nameA.addEventListener('input', function(){ state.A.name = el.nameA.value; el.offerATitle.textContent = offerLabel('A'); render(); });
+
+  el.salaryB.addEventListener('input', function(){ state.B.salary = parseFloat(el.salaryB.value) || 0; render(); });
+  el.commuteCostB.addEventListener('input', function(){ state.B.commuteCost = parseFloat(el.commuteCostB.value) || 0; render(); });
+  el.otherCostB.addEventListener('input', function(){ state.B.otherCost = parseFloat(el.otherCostB.value) || 0; render(); });
+  el.nameB.addEventListener('input', function(){ state.B.name = el.nameB.value; el.offerBTitle.textContent = offerLabel('B'); render(); });
+
+  document.querySelectorAll('.feel-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var offerKey = btn.dataset.offer;
+      document.querySelectorAll('.feel-btn[data-offer="' + offerKey + '"]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+      btn.setAttribute('aria-pressed','true');
+      var d = parseInt(btn.dataset.decomp, 10);
+      state[offerKey].decomp = d;
+      var rangeEl = offerKey === 'A' ? el.decompRangeA : el.decompRangeB;
+      var valEl = offerKey === 'A' ? el.decompValA : el.decompValB;
+      rangeEl.value = d;
+      valEl.textContent = d + ' min';
+      render();
+    });
+  });
+
+  document.querySelectorAll('.adv-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var offerKey = btn.dataset.offer;
+      var panel = offerKey === 'A' ? el.advPanelA : el.advPanelB;
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.querySelector('span').textContent = open ? 'Show advanced options' : 'Hide advanced options';
+      panel.classList.toggle('open', !open);
+    });
+  });
+
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      var answer = document.getElementById(btn.getAttribute('aria-controls'));
+      answer.classList.toggle('open', !expanded);
+    });
+  });
+
+  function showToast(text){
+    el.toast.textContent = text;
+    el.toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function(){ el.toast.classList.remove('show'); }, 2500);
+  }
+
+  el.whatsappBtn.addEventListener('click', function(){ showToast('Opening WhatsApp share…'); });
+
+  function roundRect(ctx,x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);
+    ctx.arcTo(x+w,y,x+w,y+h,r);
+    ctx.arcTo(x+w,y+h,x,y+h,r);
+    ctx.arcTo(x,y+h,x,y,r);
+    ctx.arcTo(x,y,x+w,y,r);
+    ctx.closePath();
+  }
+
+  function drawShareCard(){
+    var rA = calcOffer(state.A);
+    var rB = calcOffer(state.B);
+    var canvas = el.shareCanvas;
+    var ctx = canvas.getContext('2d');
+    var W = canvas.width, H = canvas.height;
+
+    ctx.clearRect(0,0,W,H);
+    ctx.fillStyle = '#0A1628';
+    ctx.fillRect(0,0,W,H);
+
+    var grad = ctx.createRadialGradient(500,110,10,500,110,360);
+    grad.addColorStop(0,'rgba(46,204,113,0.4)');
+    grad.addColorStop(1,'rgba(46,204,113,0)');
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.arc(500,110,360,0,Math.PI*2);
+    ctx.fill();
+
+    ctx.fillStyle = '#8892A4';
+    ctx.font = '600 24px Inter, sans-serif';
+    ctx.textBaseline = 'alphabetic';
+    ctx.textAlign = 'center';
+    ctx.fillText('JOB OFFER COMPARISON', 500, 130);
+
+    var winnerKey = rA.realWage >= rB.realWage ? 'A' : 'B';
+    ctx.fillStyle = '#FFFFFF';
+    ctx.font = '400 52px "DM Serif Display", Georgia, serif';
+    var winnerText = offerLabel(winnerKey) + ' wins';
+    ctx.fillText(winnerText, 500, 220);
+
+    ctx.textAlign = 'left';
+    function drawOfferBlock(x, label, wage, isWinner){
+      ctx.fillStyle = isWinner ? '#2ECC71' : '#8892A4';
+      ctx.font = '600 22px Inter, sans-serif';
+      ctx.fillText(label.toUpperCase(), x, 340);
+      ctx.fillStyle = '#FFFFFF';
+      ctx.font = '400 64px "DM Serif Display", Georgia, serif';
+      ctx.fillText(fmtMoney(wage), x, 410);
+      ctx.font = '400 20px Inter, sans-serif';
+      ctx.fillStyle = '#8892A4';
+      ctx.fillText('per real hour', x, 445);
+    }
+    drawOfferBlock(70, offerLabel('A'), rA.realWage, winnerKey === 'A');
+    drawOfferBlock(520, offerLabel('B'), rB.realWage, winnerKey === 'B');
+
+    ctx.strokeStyle = 'rgba(136,146,164,0.25)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(500, 320); ctx.lineTo(500, 460);
+    ctx.stroke();
+
+    var diff = Math.abs(rA.realWage - rB.realWage);
+    var lower = Math.min(rA.realWage, rB.realWage);
+    var pct = lower > 0 ? Math.round((diff/lower)*100) : 0;
+
+    ctx.fillStyle = 'rgba(46,204,113,0.14)';
+    roundRect(ctx, 70, 520, 860, 80, 20);
+    ctx.fill();
+    ctx.fillStyle = '#2ECC71';
+    ctx.font = '600 28px Inter, sans-serif';
+    ctx.fillText(fmtMoney(diff) + '/hr more, real terms (' + pct + '% difference)', 100, 570);
+
+    ctx.fillStyle = '#8892A4';
+    ctx.font = '500 26px Inter, sans-serif';
+    ctx.fillText('Compare yours at WageReality.com', 70, H - 70);
+
+    el.shareCanvasImg.src = canvas.toDataURL('image/png');
+  }
+
+  function refreshShareCard(){
+    if (document.fonts && document.fonts.ready){
+      document.fonts.ready.then(drawShareCard);
+    } else {
+      drawShareCard();
+    }
+  }
+
+  el.downloadCardBtn.addEventListener('click', function(){
+    drawShareCard();
+    var link = document.createElement('a');
+    link.download = 'wagereality-comparison.png';
+    link.href = el.shareCanvas.toDataURL('image/png');
+    link.click();
+    showToast('Image card downloaded');
+  });
+
+  var origRender = render;
+  render = function(){
+    var r = origRender();
+    refreshShareCard();
+    return r;
+  };
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+  render();
+})();
+</script>
+
+</body>
+</html>

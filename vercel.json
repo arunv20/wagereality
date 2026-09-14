@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/compare-job-offers", "destination": "/compare-job-offers.html" }
+  ]
+}
